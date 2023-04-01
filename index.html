@@ -41,6 +41,13 @@ button {
     height: 60px;
     width: 200px;
     font-size: 20px;
+    font-weight: 500;
+    transition: all 500ms ease;
+    color: var(--tg-theme-button-text-color);
+    background: var(--tg-theme-button-color);
+}
+button:hover {
+    background: var(--tg-theme-secondary-bg-color);
 }
 
 </style>
@@ -48,7 +55,7 @@ button {
 <body>
 <div id="main">
 <h1>Mudgin Coffee</h1>
-<button id="buy"Начать делать заказ</button>
+<button id="buy">Начать делать заказ</button>
 </div>
 <script src="https://telegram.org/js/telegram-web-app.js"></script>
 </body>
