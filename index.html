@@ -51,7 +51,22 @@ button {
 button:hover {
     background: var(--tg-theme-secondary-bg-color);
 }
-
+#order_form {
+    display: none;
+    text-align: center;
+}
+input {
+    width: 90%;
+    outline: none;
+    margin: 10px 5%;
+    padding: 15px 10px;
+    font-size: 14px;
+    border: 2px solid silver;
+    border-radius: 5px;
+}
+input:focus {
+    border-color: var(--tg-theme-button-color);
+}
 </style>
 </head>
 <body>
@@ -59,6 +74,22 @@ button:hover {
 <h1>Mudgin Coffee</h1>
 <button id="buy">Начать делать заказ</button>
 </div>
+<form id="order_form">
+<input type="text" placeholder="Введите имя" id="user_name">
+<input type="text" placeholder="Введите эл. почту" id="user_email">
+<input type="text" placeholder="Введите телефон" id="user_phone">
+<button id="order">Оформить заказ</button>
+</form>
 <script src="https://telegram.org/js/telegram-web-app.js"></script>
+<script>
+let bot = window.Telegram.WebApp;
+let buy = document.getElementById("buy");
+let order = document.getElementById("order");
+let main = document.getElementById("main");
+let order_form = document.getElementById("order_form");
+buy.addEventListener("click", () => {
+    main.style.display = "none";
+});
+</script>
 </body>
 </html>
