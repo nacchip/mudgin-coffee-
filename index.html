@@ -110,15 +110,10 @@ buy.addEventListener("click", () => {
     let error = document.getElementById("error");
 });
 order.addEventListener("click", () => {
-    if(user_phone.lenght < 10) {
-        error.innerText = "Ошибка в номере телефона";
-    }
-    else {  
-        sure_text.innerText = user_phone + " ?";
-        main.style.display = "none";
-        order_form.style.display = "none";
-        sure.style.display = "block";
-    }
+    sure_text.innerText = user_phone + " ?";
+    main.style.display = "none";
+    order_form.style.display = "none";
+    sure.style.display = "block";
 });
 </script>
 </body>
