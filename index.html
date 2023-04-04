@@ -100,7 +100,7 @@ let order_form = document.getElementById("order_form");
 let sure = document.getElementById("sure");
 let sure_text = document.getElementById("sure_text");
 
-tg.expand();
+bot.expand();
 buy.addEventListener("click", () => {
     main.style.display = "none";
     order_form.style.display = "block";
@@ -113,9 +113,9 @@ order.addEventListener("click", () => {
         error.innerText = "Ошибка в номере телефона";
         returt;
     }
-    //sure_text.innerText = user_phone.value + " ?";
-    //order_form.style.display = "none";
-    //sure.style.display = "block";
+    sure_text.innerText = user_phone.value + " ?";
+    order_form.style.display = "none";
+    sure.style.display = "block";
 });
 </script>
 </body>
