@@ -105,11 +105,11 @@ bot.expand();
 buy.addEventListener("click", () => {
     main.style.display = "none";
     order_form.style.display = "block";
-});
-order.addEventListener("click", () => {
     let user_name = document.getElementById("user_name").value;
     let user_phone = document.getElementById("user_phone").value;
     let error = document.getElementById("error");
+});
+order.addEventListener("click", () => {
     if(user_phone.lenght < 10) {
         error.innerText = "Ошибка в номере телефона";
     }
