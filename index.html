@@ -112,11 +112,12 @@ order.addEventListener("click", () => {
     let error = document.getElementById("error");
     if(user_phone.lenght < 10) {
         error.innerText = "Ошибка в номере телефона";
-        return;
     }
-    sure_text.innerText = user_phone + " ?";
-    order_form.style.display = "none";
-    sure.style.display = "block";
+    else {  
+        sure_text.innerText = user_phone + " ?";
+        order_form.style.display = "none";
+        sure.style.display = "block";
+    }
 });
 </script>
 </body>
