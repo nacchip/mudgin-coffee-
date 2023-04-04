@@ -67,6 +67,13 @@ input {
 input:focus {
     border-color: var(--tg-theme-button-color);
 }
+#sure {
+    display: none;
+    text-align: center;
+}
+#sure_text {
+    color: var(--tg-theme-hint-color);
+}
 </style>
 </head>
 <body>
@@ -76,10 +83,13 @@ input:focus {
 </div>
 <form id="order_form">
 <input type="text" placeholder="Введите имя" id="user_name">
-<input type="text" placeholder="Введите эл. почту" id="user_email">
 <input type="text" placeholder="Введите телефон" id="user_phone">
 <button id="order">Оформить заказ</button>
 </form>
+<div id="sure">
+<p>Ваш телефон</p><br>
+<h4 id="sure_text"></h4>
+</div>
 <script src="https://telegram.org/js/telegram-web-app.js"></script>
 <script>
 let bot = window.Telegram.WebApp;
@@ -87,12 +97,26 @@ let buy = document.getElementById("buy");
 let order = document.getElementById("order");
 let main = document.getElementById("main");
 let order_form = document.getElementById("order_form");
+let sure = document.getElementById("sure");
+let sure_text = document.getElementById("sure_text");
+
+tg.expand();
 buy.addEventListener("click", () => {
     main.style.display = "none";
     order_form.style.display = "block";
 });
 order.addEventListener("click", () => {
-    bot.close();
+    let user_name = document.getElementById("user_name").value;
+    let user_phone = document.getElementById("user_phone").value;
+    let error = document.getElementById("error");
+    if(user_phone.lenght < 10) {
+        error.innerText = "Ошибка в номере телефона";
+        returt;
+    }
+    sure_text.innerText = user_phone.value + " ?";
+    order_form.style.display = "none";
+    sure.style.display = "block";
+    //bot.close();
 });
 </script>
 </body>
