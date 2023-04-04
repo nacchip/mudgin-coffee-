@@ -82,6 +82,7 @@ input:focus {
 <button id="buy">Начать делать заказ</button>
 </div>
 <form id="order_form">
+<p id="error"></p>
 <input type="text" placeholder="Введите имя" id="user_name">
 <input type="text" placeholder="Введите телефон" id="user_phone">
 <button id="order">Оформить заказ</button>
@@ -113,7 +114,7 @@ order.addEventListener("click", () => {
         error.innerText = "Ошибка в номере телефона";
         returt;
     }
-    sure_text.innerText = user_phone.value + " ?";
+    sure_text.innerText = user_phone + " ?";
     order_form.style.display = "none";
     sure.style.display = "block";
 });
