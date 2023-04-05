@@ -111,7 +111,7 @@ order.addEventListener("click", () => {
     let user_phone = document.getElementById("user_phone").value;
     let error = document.getElementById("error");
     if(user_phone.length < 10) {
-        error.innerHtml = "Ошибка в номере телефона";
+        error.innerText = "Ошибка в номере телефона";
     }
     else {
         sure_text.innerText = user_phone + " ?";
