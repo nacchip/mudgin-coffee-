@@ -126,6 +126,8 @@ let sure_text = document.getElementById("sure_text");
 let mistake = document.getElementById("error");
 let corr_phone = document.getElementById("corr_phone");
 let uncorr_phone = document.getElementById("uncorr_phone");
+let country = document.getElementById("country");
+let country_select = document.getElementById("country_select");
 bot.expand();
 buy.addEventListener("click", () => {
     main.style.display = "none";
@@ -146,6 +148,9 @@ order.addEventListener("click", () => {
         order_form.style.display = "none";
         sure.style.display = "block";
     }
+});
+country.addEventListener("click", () => {
+    country_select.show();
 });
 corr_phone.addEventListener("click", () => {
     bot.close();
