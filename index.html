@@ -109,6 +109,8 @@ buy.addEventListener("click", () => {
 order.addEventListener("click", () => {
     let user_name = document.getElementById("user_name").value;
     let user_phone = document.getElementById("user_phone").value;
+    console.log(user_phone);
+    console.log(user_phone.length);
     let error = document.getElementById("error");
     if (user_phone.length < 10) {
         console.log("else");
