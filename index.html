@@ -90,6 +90,8 @@ input:focus {
 <div id="sure">
 <p>Ваш телефон</p><br>
 <h4 id="sure_text"></h4>
+<button id="corr_phone">Да</button>
+<button id="uncorr_phone">Нет</button>
 </div>
 <script src="https://telegram.org/js/telegram-web-app.js"></script>
 <script>
@@ -101,6 +103,8 @@ let order_form = document.getElementById("order_form");
 let sure = document.getElementById("sure");
 let sure_text = document.getElementById("sure_text");
 let mistake = document.getElementById("error");
+let corr_phone = document.getElementById("corr_phone");
+let uncorr_phone = document.getElementById("uncorr_phone");
 bot.expand();
 buy.addEventListener("click", () => {
     main.style.display = "none";
@@ -109,8 +113,10 @@ buy.addEventListener("click", () => {
 order.addEventListener("click", () => {
     let user_name = document.getElementById("user_name").value;
     let user_phone = document.getElementById("user_phone").value;
-    
-    if (user_phone.length < 10) {
+    if (user_name.length < 4) {
+        mistake.innerText = "У вас слишком короткое имя :3";       
+    }
+    if else (user_phone.length < 10) {
         mistake.innerText = "Ошибка в номере телефона";
     }
     else {
@@ -118,6 +124,13 @@ order.addEventListener("click", () => {
         order_form.style.display = "none";
         sure.style.display = "block";
     }
+});
+corr_phone.addEventListener("click", () => {
+    bot.close();
+});
+uncorr_phone.addEventListener("click", () => {
+    sure.style.display = "none";
+    order_form.style.display = "block";
 });
 </script>
 </body>
