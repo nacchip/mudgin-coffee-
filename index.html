@@ -100,7 +100,7 @@ let main = document.getElementById("main");
 let order_form = document.getElementById("order_form");
 let sure = document.getElementById("sure");
 let sure_text = document.getElementById("sure_text");
-
+let mistake = document.getElementById("error");
 bot.expand();
 buy.addEventListener("click", () => {
     main.style.display = "none";
@@ -109,12 +109,9 @@ buy.addEventListener("click", () => {
 order.addEventListener("click", () => {
     let user_name = document.getElementById("user_name").value;
     let user_phone = document.getElementById("user_phone").value;
-    console.log(user_phone);
-    console.log(user_phone.length);
-    let error = document.getElementById("error");
+    
     if (user_phone.length < 10) {
-        console.log("else");
-        error.innerText = "Ошибка в номере телефона";
+        mistake.innerText = "Ошибка в номере телефона";
     }
     else {
         sure_text.innerText = user_phone + " ?";
