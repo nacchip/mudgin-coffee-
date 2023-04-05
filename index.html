@@ -122,7 +122,6 @@ order.addEventListener("click", () => {
     else {
         sure_text.innerText = user_phone + " ?";
         mistake.innerText = " ";
-        user_phone = "";
         order_form.style.display = "none";
         sure.style.display = "block";
     }
@@ -131,6 +130,7 @@ corr_phone.addEventListener("click", () => {
     bot.close();
 });
 uncorr_phone.addEventListener("click", () => {
+    user_phone = "";
     sure.style.display = "none";
     order_form.style.display = "block";
 });
