@@ -76,6 +76,12 @@ input:focus {
 #sure_text {
     color: var(--tg-theme-hint-color);
 }
+#country {
+    text-align: center;
+    color: var(--tg-theme-text-color);
+    background: var(--tg-theme-secondary-bg-color);
+    width: 100%;
+}
 </style>
 </head>
 <body>
@@ -86,6 +92,7 @@ input:focus {
 <div id="order_form">
 <p id="error"> </p>
 <input type="text" placeholder="Введите имя" id="user_name">
+<button id="country">Выберите вашу страну</button>
 <input type="tel" placeholder="Введите номер телефона" id="user_phone" class="phone">
 <button id="order">Оформить заказ</button>
 </div>
@@ -99,7 +106,7 @@ input:focus {
 <script src="https://code.jquery.com/jquery-2.2.4.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script>
 <script>
-$(".phone").mask("+7(999)999-9999");
+/*$(".phone").mask("+7(999)999-9999");*/
 let bot = window.Telegram.WebApp;
 let buy = document.getElementById("buy");
 let order = document.getElementById("order");
