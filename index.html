@@ -82,7 +82,6 @@ input:focus {
 <button id="buy">Начать делать заказ</button>
 </div>
 <form id="order_form">
-<p id="error"></p>
 <input type="text" placeholder="Введите имя" id="user_name">
 <input type="text" placeholder="Введите телефон" id="user_phone">
 <button id="order">Оформить заказ</button>
@@ -105,13 +104,16 @@ bot.expand();
 buy.addEventListener("click", () => {
     main.style.display = "none";
     order_form.style.display = "block";
+});
+order.addEventListener("click", () => {
     let user_name = document.getElementById("user_name").value;
     let user_phone = document.getElementById("user_phone").value;
     let error = document.getElementById("error");
-});
-order.addEventListener("click", () => {
-    sure_text.innerText = user_phone + " ?";
-    main.style.display = "none";
+    if(user_phone.lenght < 10) {
+        error.innerText = "Ошибка в номере телефона";
+        return;
+    }
+    sure_text.innerText = user_phone.value + " ?";
     order_form.style.display = "none";
     sure.style.display = "block";
 });
