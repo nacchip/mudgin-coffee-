@@ -85,7 +85,7 @@ input:focus {
 <div id="order_form">
 <p id="error"> </p>
 <input type="text" placeholder="Введите имя" id="user_name">
-<input type="number" placeholder="Введите телефон" id="user_phone">
+<input type="tel" placeholder="Введите телефон" id="user_phone" class="phone">
 <button id="order">Оформить заказ</button>
 </div>
 <div id="sure">
@@ -95,7 +95,10 @@ input:focus {
 <button id="uncorr_phone">Нет</button>
 </div>
 <script src="https://telegram.org/js/telegram-web-app.js"></script>
+<script src="https://code.jquery.com/jquery-2.2.4.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script>
 <script>
+$(".phone").mask("+7(999)999-9999");
 let bot = window.Telegram.WebApp;
 let buy = document.getElementById("buy");
 let order = document.getElementById("order");
