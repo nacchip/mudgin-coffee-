@@ -74,6 +74,11 @@ input:focus {
 #sure_text {
     color: var(--tg-theme-hint-color);
 }
+#corr_phone, #uncorr_phone {
+    display: inline;
+    width: 50%;
+    position: absolute;
+}
 </style>
 </head>
 <body>
@@ -121,6 +126,7 @@ order.addEventListener("click", () => {
     }
     else {
         sure_text.innerText = user_phone + " ?";
+        mistake.innerText = " ";
         order_form.style.display = "none";
         sure.style.display = "block";
     }
