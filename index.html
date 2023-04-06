@@ -133,7 +133,7 @@ input:focus {
 /*$(".phone").mask("+7(999)999-9999");*/
 let bot = window.Telegram.WebApp;
 let buy = document.getElementById("buy");
-let c_selected = "no";
+let country_selected = "no";
 let order = document.getElementById("order");
 let start = document.getElementById("start");
 let order_form = document.getElementById("order_form");
@@ -173,11 +173,18 @@ country.addEventListener("click", () => {
 russia_country_text.addEventListener("click", () => {
     country_select.style.display = "none";
     order_form.style.display = "block";
+    country_selected = "yes";
     $(".phone").mask("+7(999)999-9999");
     user_phone.focus();
 });
 corr_phone.addEventListener("click", () => {
     bot.close();
+});
+user_phone.addEventListener("focus", () => {
+    if (country_selected !== "yes") {
+        mistake.innerText = "Сначала выберите страну";
+        user_phone.unfocus();
+    }
 });
 uncorr_phone.addEventListener("click", () => {
     user_phone = " ";
