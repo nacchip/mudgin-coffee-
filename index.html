@@ -119,7 +119,9 @@ input:focus {
 <div id="kz_country">
 <button id="kz_country_but"><div id="kz_country_text">🇰🇿  Казахстан</div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;<div id="kz_country_num">+7</div></button>
 </div>
-</center>
+<div id="belarus_country">
+<button id="belarus_country_but"><div id="belarus_country_text">🇧🇾  Беларусь</div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;<div id="belarus_country_num">+375</div></button>
+</div></center>
 </div>
 <div id="order_form">
 <p id="error"> </p>
@@ -153,6 +155,7 @@ let uncorr_phone = document.getElementById("uncorr_phone");
 let country = document.getElementById("country");
 let russia_country_but = document.getElementById("russia_country_but");
 let kz_country_but = document.getElementById("kz_country_but");
+let belarus_country_but = document.getElementById("kz_country_but");
 let country_select = document.getElementById("country_select");
 bot.expand();
 buy.addEventListener("click", () => {
@@ -187,12 +190,20 @@ russia_country_but.addEventListener("click", () => {
     country.textContent = "🇷🇺 Россия";
     user_phone.focus();
 });
-kz_country_but.addEventListener("click", () => {
+russia_country_but.addEventListener("click", () => {
     country_select.style.display = "none";
     order_form.style.display = "block";
     country_selected = "yes";
     $(".phone").mask("+7(999)999-9999");
-    country.textContent = "🇰🇿 Казахстан";
+    country.textContent = "🇰🇿  Казахстан";
+    user_phone.focus();
+});
+russia_country_but.addEventListener("click", () => {
+    country_select.style.display = "none";
+    order_form.style.display = "block";
+    country_selected = "yes";
+    $(".phone").mask("+375(999)999-9999");
+    country.textContent = "🇧🇾  Беларусь";
     user_phone.focus();
 });
 corr_phone.addEventListener("click", () => {
