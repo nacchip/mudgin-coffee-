@@ -95,7 +95,7 @@ input:focus {
 </style>
 </head>
 <body>
-<div id="main">
+<div id="start">
 <h1>Mudgin Coffee</h1>
 <button id="buy">Начать делать заказ</button>
 </div>
@@ -123,7 +123,7 @@ input:focus {
 let bot = window.Telegram.WebApp;
 let buy = document.getElementById("buy");
 let order = document.getElementById("order");
-let main = document.getElementById("main");
+let start = document.getElementById("start");
 let order_form = document.getElementById("order_form");
 let sure = document.getElementById("sure");
 let sure_text = document.getElementById("sure_text");
@@ -134,7 +134,7 @@ let country = document.getElementById("country");
 let country_select = document.getElementById("country_select");
 bot.expand();
 buy.addEventListener("click", () => {
-    main.style.display = "none";
+    start.style.display = "none";
     order_form.style.display = "block";
 });
 order.addEventListener("click", () => {
