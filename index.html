@@ -142,6 +142,7 @@ let mistake = document.getElementById("error");
 let corr_phone = document.getElementById("corr_phone");
 let uncorr_phone = document.getElementById("uncorr_phone");
 let country = document.getElementById("country");
+let russia_country_text = document.getElementById("russia_country_text");
 let country_select = document.getElementById("country_select");
 bot.expand();
 buy.addEventListener("click", () => {
@@ -167,6 +168,12 @@ order.addEventListener("click", () => {
 country.addEventListener("click", () => {
     order_form.style.display = "none";
     country_select.style.display = "block";
+});
+russia_country_text.addEventListener("click", () => {
+    country_select.style.display = "none";
+    order_form.style.display = "block";
+    $(".phone").mask("+7(999)999-9999");
+    user_phone.focus();
 });
 corr_phone.addEventListener("click", () => {
     bot.close();
