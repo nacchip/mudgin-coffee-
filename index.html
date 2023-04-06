@@ -116,7 +116,6 @@ input:focus {
 <div id="russia_country">
 <button id="russia_country_but"><div id="russia_country_text">🇷🇺  Россия</div><div id="russia_country_num">+7</div></button>
 </div>
-<br>
 <div id="kz_country">
 <button id="kz_country_but"><div id="kz_country_text">🇰🇿  Казахстан</div><div id="kz_country_num">+7</div></button>
 </div>
@@ -184,6 +183,7 @@ russia_country_but.addEventListener("click", () => {
     order_form.style.display = "block";
     country_selected = "yes";
     $(".phone").mask("+7(999)999-9999");
+    country.innerHtml = "🇷🇺 Россия";
     user_phone.focus();
 });
 kz_country_but.addEventListener("click", () => {
@@ -191,6 +191,7 @@ kz_country_but.addEventListener("click", () => {
     order_form.style.display = "block";
     country_selected = "yes";
     $(".phone").mask("+7(999)999-9999");
+    country.innerHtml = "🇰🇿 Казахстан";
     user_phone.focus();
 });
 corr_phone.addEventListener("click", () => {
