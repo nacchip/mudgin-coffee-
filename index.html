@@ -112,7 +112,7 @@ input:focus {
 </div>
 <div id="country_select">
 <div id="russia_country">
-<button id="russia_country_text"><div>🇷🇺  Россия</div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<div id="russia_country_num">+7</div></button>
+<button id="russia_country_but"><div id="russia_country_text>🇷🇺  Россия</div>&nbsp;&nbsp;&nbsp;&nbsp;<div id="russia_country_num">+7</div></button>
 </div>
 </div>
 <div id="order_form">
@@ -145,7 +145,7 @@ let mistake = document.getElementById("error");
 let corr_phone = document.getElementById("corr_phone");
 let uncorr_phone = document.getElementById("uncorr_phone");
 let country = document.getElementById("country");
-let russia_country_text = document.getElementById("russia_country_text");
+let russia_country_but = document.getElementById("russia_country_but");
 let country_select = document.getElementById("country_select");
 bot.expand();
 buy.addEventListener("click", () => {
@@ -172,7 +172,7 @@ country.addEventListener("click", () => {
     order_form.style.display = "none";
     country_select.style.display = "block";
 });
-russia_country_text.addEventListener("click", () => {
+russia_country_but.addEventListener("click", () => {
     country_select.style.display = "none";
     order_form.style.display = "block";
     country_selected = "yes";
