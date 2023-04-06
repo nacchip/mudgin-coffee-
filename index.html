@@ -92,15 +92,16 @@ input:focus {
     display: none;
     width: 100%;
 }
-#russia_country_num {
+#russia_country_num, #kz_country_num {
     color: var(--tg-theme-hint-color);    
 }
-#russia_country_text {
+#russia_country_text, #kz_country_text {
     border-radius: 0%;
     width: 100%;
     background: var(--tg-theme-bg-color);
+    left: 80%;
 }
-#russia_country_text, #russia_country_num {
+#russia_country_text, #russia_country_num, #kz_country_text, #kz_country_num {
     display: inline;    
     text-align: center;    
 }
@@ -113,7 +114,11 @@ input:focus {
 </div>
 <div id="country_select">
 <div id="russia_country">
-<button id="russia_country_but"><div id="russia_country_text">🇷🇺  Россия</div>&nbsp;&nbsp;&nbsp;&nbsp;<div id="russia_country_num">+7</div></button>
+<button id="russia_country_but"><div id="russia_country_text">🇷🇺  Россия</div><div id="russia_country_num">+7</div></button>
+</div>
+<br>
+<div id="kz_country">
+<button id="kz_country_but"><div id="kz_country_text">🇰🇿  Казахстан</div><div id="kz_country_num">+7</div></button>
 </div>
 </div>
 <div id="order_form">
@@ -147,6 +152,7 @@ let corr_phone = document.getElementById("corr_phone");
 let uncorr_phone = document.getElementById("uncorr_phone");
 let country = document.getElementById("country");
 let russia_country_but = document.getElementById("russia_country_but");
+let kz_country_but = document.getElementById("kz_country_but");
 let country_select = document.getElementById("country_select");
 bot.expand();
 buy.addEventListener("click", () => {
@@ -174,6 +180,13 @@ country.addEventListener("click", () => {
     country_select.style.display = "block";
 });
 russia_country_but.addEventListener("click", () => {
+    country_select.style.display = "none";
+    order_form.style.display = "block";
+    country_selected = "yes";
+    $(".phone").mask("+7(999)999-9999");
+    user_phone.focus();
+});
+kz_country_but.addEventListener("click", () => {
     country_select.style.display = "none";
     order_form.style.display = "block";
     country_selected = "yes";
