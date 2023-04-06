@@ -183,7 +183,7 @@ corr_phone.addEventListener("click", () => {
 user_phone.addEventListener("focus", () => {
     if (country_selected !== "yes") {
         mistake.innerText = "Сначала выберите страну";
-        user_phone.unfocus();
+        user_phone.blur();
     }
 });
 uncorr_phone.addEventListener("click", () => {
