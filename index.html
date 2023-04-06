@@ -135,6 +135,7 @@ let bot = window.Telegram.WebApp;
 let buy = document.getElementById("buy");
 let country_selected = "no";
 let order = document.getElementById("order");
+let input = document.getElementByTagName("input");
 let start = document.getElementById("start");
 let order_form = document.getElementById("order_form");
 let sure = document.getElementById("sure");
@@ -179,6 +180,9 @@ russia_country_text.addEventListener("click", () => {
 });
 corr_phone.addEventListener("click", () => {
     bot.close();
+});
+input.addEventListener("focus", () => {
+    mistake.innerText = " ";
 });
 user_phone.addEventListener("focus", () => {
     if (country_selected !== "yes") {
