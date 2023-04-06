@@ -135,7 +135,6 @@ let bot = window.Telegram.WebApp;
 let buy = document.getElementById("buy");
 let country_selected = "no";
 let order = document.getElementById("order");
-let input = document.getElementsByTagName("input");
 let start = document.getElementById("start");
 let order_form = document.getElementById("order_form");
 let sure = document.getElementById("sure");
@@ -185,6 +184,7 @@ user_name.addEventListener("focus", () => {
     mistake.innerText = " ";
 });
 user_phone.addEventListener("focus", () => {
+    mistake.innerText = " ";
     if (country_selected !== "yes") {
         mistake.innerText = "Сначала выберите страну";
         user_phone.blur();
