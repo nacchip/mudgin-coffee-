@@ -92,6 +92,15 @@ input:focus {
     display: none;
     width: 100%;
 }
+#russia_country_num {
+    color: var(--tg-theme-hint-color);    
+}
+#russia_country_text
+    border-radius: 0%
+}
+#russia_country_text, #russia_country_num {
+    display: inline-block;        
+}
 </style>
 </head>
 <body>
@@ -100,7 +109,9 @@ input:focus {
 <button id="buy">Начать делать заказ</button>
 </div>
 <div id="country_select">
-<button id="russia_country">Russia</button>
+<div id="russia_country">
+<button id="russia_country_text">Россия&nbsp;&nbsp;<p id="russia_country_num">+7</p></button>
+</div>
 </div>
 <div id="order_form">
 <p id="error"> </p>
@@ -154,6 +165,7 @@ order.addEventListener("click", () => {
     }
 });
 country.addEventListener("click", () => {
+    order_form.style.display = "none";
     country_select.style.display = "block";
 });
 corr_phone.addEventListener("click", () => {
