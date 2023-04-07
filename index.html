@@ -92,24 +92,24 @@ input:focus {
     display: none;
     width: 100%;
 }
-#russia_country_num, #kz_country_num, #belarus_country_num {
+#belarus_country_num, #kz_country_num, #russia_country_num {
     color: var(--tg-theme-hint-color);    
 }
-#russia_country_text, #kz_country_text, #belarus_country_text {
+#belarus_country_text, #kz_country_text, #russia_country_text {
     border-radius: 0%;
     width: 100%;
     left: 80%;
 }
-#russia_country_text, #russia_country_num, #kz_country_text, #kz_country_num, #belarus_country_text, #belarus_country_num {
+#belarus_country_text, #belarus_country_num, #kz_country_text, #kz_country_num, #russia_country_text, #russia_country_num, {
     display: inline;    
     text-align: center;    
 }
-#russia_country_but, #kz_country_but, #belarus_country_but {
+#belarus_country_but, #kz_country_but, #russia_country_but {
     width: 100%;
     height: 30px;
     background: var(--tg-theme-bg-color);
 }
-#russia_country_but:hover, #kz_country_but:hover, #belarus_country_but:hover {
+#belarus_country_but:hover, #kz_country_but:hover, #russia_country_but:hover   {
     background: var(--tg-theme-bg-color);
 }
 </style>
@@ -121,15 +121,16 @@ input:focus {
 </div>
 <div id="country_select">
 <center>
-<div id="russia_country">
-<button id="russia_country_but"><div id="russia_country_text">🇷🇺  Россия</div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;<div id="russia_country_num">+7</div></button>
+<div id="belarus_country">
+<button id="belarus_country_but"><div id="belarus_country_text">🇧🇾  Беларусь</div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;<div id="belarus_country_num">+375</div></button>
 </div>
 <div id="kz_country">
 <button id="kz_country_but"><div id="kz_country_text">🇰🇿  Казахстан</div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;<div id="kz_country_num">+7</div></button>
 </div>
-<div id="belarus_country">
-<button id="belarus_country_but"><div id="belarus_country_text">🇧🇾  Беларусь</div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;<div id="belarus_country_num">+375</div></button>
-</div></center>
+<div id="russia_country">
+<button id="russia_country_but"><div id="russia_country_text">🇷🇺  Россия</div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;<div id="russia_country_num">+7</div></button>
+</div>
+</center>
 </div>
 <div id="order_form">
 <p id="error"> </p>
