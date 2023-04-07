@@ -201,14 +201,6 @@ kz_country_but.addEventListener("click", () => {
     country.textContent = "🇰🇿  Казахстан";
     user_phone.focus();
 });
-belarus_country_but.addEventListener("click", () => {
-    country_select.style.display = "none";
-    order_form.style.display = "block";
-    country_selected = "yes";
-    $(".phone").mask("+375 99 999 9999");
-    country.textContent = "🇧🇾  Беларусь";
-    user_phone.focus();
-});
 corr_phone.addEventListener("click", () => {
     bot.close();
 });
