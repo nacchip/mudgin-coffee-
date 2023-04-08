@@ -187,10 +187,16 @@ order.addEventListener("click", () => {
         mistake.innerText = "Ошибка в номере телефона";
     }
     else {
-        sure_text.innerText = user_phone + " ?";
+        /*sure_text.innerText = user_phone + " ?";
         mistake.innerText = " ";
         order_form.style.display = "none";
-        sure.style.display = "block";
+        sure.style.display = "block";*/
+        let data = {
+            name: user_name,
+            phone: user_phone
+        }
+    bot.sendData(JSON.stringify(data));
+    bot.close();
     }
 });
 country.addEventListener("click", () => {
@@ -201,7 +207,7 @@ russia_country_but.addEventListener("click", () => {
     country_select.style.display = "none";
     order_form.style.display = "block";
     country_selected = "yes";
-    $(".phone").mask("+7 999 999 9999");
+    /*$(".phone").mask("+7 999 999 9999");*/
     country.textContent = "🇷🇺 Россия";
     user_phone.focus();
 });
@@ -236,14 +242,14 @@ uncorr_phone.addEventListener("click", () => {
     sure.style.display = "none";
     order_form.style.display = "block";
 });
-corr_phone.addEventListener("click", () => {
+/*corr_phone.addEventListener("click", () => {
     let data = {
         name: user_name,
         phone: user_phone
     }
     bot.sendData(JSON.stringify(data));
     bot.close();
-});
+});*/
 </script>
 </body>
 </html>
