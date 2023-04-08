@@ -222,6 +222,11 @@ belarus_country_but.addEventListener("click", () => {
     user_phone.focus();
 });
 corr_phone.addEventListener("click", () => {
+    let data = {
+        name: user_name,
+        phone: user_phone
+    }
+    bot.sendData(JSON.stringify(data);
     bot.close();
 });
 user_name.addEventListener("focus", () => {
