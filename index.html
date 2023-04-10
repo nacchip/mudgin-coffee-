@@ -213,6 +213,10 @@ user_name.addEventListener("focus", () => {
 });
 user_phone.addEventListener("focus", () => {
     mistake.innerText = " ";
+    if (country_selected != yes) {
+        mistake.innerText = "Выберите страну!"
+.       user_phone.blur();
+    }
 });
 </script>
 </body>
