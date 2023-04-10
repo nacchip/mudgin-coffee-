@@ -114,6 +114,8 @@ input:focus {
 </div>
 <div id="order"
 <div id="country_select">
+<img src="./Coffee.tgs">
+<button id="order_complete">Далее</button>
 </div>
 <center>
 <div id="belarus_country">
@@ -150,7 +152,9 @@ let buy = document.getElementById("buy");
 let country_selected = "no";
 let order_but = document.getElementById("order_but");
 let start = document.getElementById("start");
-let order_form = document.getElementById("order_form");
+let order_form = document.getelementbyid("order_form");
+let order = document.getelementbyid("order");
+let order_complete = document.getElementById("order_complete");
 let mistake = document.getElementById("error");
 let corr_phone = document.getElementById("corr_phone");
 let uncorr_phone = document.getElementById("uncorr_phone");
@@ -162,6 +166,10 @@ let country_select = document.getElementById("country_select");
 bot.expand();
 buy.addEventListener("click", () => {
     start.style.display = "none";
+    order.style.display = "block";
+});
+order_complete.addEventListener("click", () => {
+    order.style.display = "none";
     order_form.style.display = "block";
 });
 order_but.addEventListener("click", () => {
