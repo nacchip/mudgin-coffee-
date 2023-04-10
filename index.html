@@ -112,6 +112,7 @@ input:focus {
 <h1>Mudgin Coffee</h1>
 <button id="buy">Начать делать заказ</button>
 </div>
+<div id="order"
 <div id="country_select">
 <center>
 <div id="belarus_country">
@@ -130,7 +131,7 @@ input:focus {
 <input type="text" placeholder="Введите имя" id="user_name">
 <button id="country">Выберите вашу страну</button>
 <input type="tel" placeholder="Введите номер телефона" id="user_phone" class="phone">
-<button id="order">Оформить заказ</button>
+<button id="order_but">Оформить заказ</button>
 </div>
 <script src="https://telegram.org/js/telegram-web-app.js"></script>
 <script src="https://code.jquery.com/jquery-2.2.4.js"></script>
@@ -146,7 +147,7 @@ setThemeClass();
 let bot = window.Telegram.WebApp;
 let buy = document.getElementById("buy");
 let country_selected = "no";
-let order = document.getElementById("order");
+let order_but = document.getElementById("order_but");
 let start = document.getElementById("start");
 let order_form = document.getElementById("order_form");
 let mistake = document.getElementById("error");
@@ -162,7 +163,7 @@ buy.addEventListener("click", () => {
     start.style.display = "none";
     order_form.style.display = "block";
 });
-order.addEventListener("click", () => {
+order_but.addEventListener("click", () => {
     let user_name = document.getElementById("user_name").value;
     let user_phone = document.getElementById("user_phone").value;
     if (user_name.length < 4) {
